@@ -62,8 +62,8 @@ app.post("/api/realtime", async (req, res) => {
     };
 
     const form = new FormData();
-    form.append("sdp", new Blob([req.body.sdp], {type:"application/sdp"}), "offer.sdp");
-    form.append("session", new Blob([JSON.stringify(session)], {type:"application/json"}), "session.json");
+    form.append("sdp", req.body.sdp);
+    form.append("session", JSON.stringify(session));
 
     const r = await fetch("https://api.openai.com/v1/realtime/calls", {
       method:"POST",
