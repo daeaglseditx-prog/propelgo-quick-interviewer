@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PropelGO Quick Interviewer</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f6fa;color:#172033;font-family:system-ui,sans-serif}
+main{max-width:760px;margin:auto;padding:18px}.top{display:flex;justify-content:space-between;gap:10px;align-items:center}
+h1{font-size:26px;margin:0}.sub{color:#667085;font-size:13px;margin:5px 0 18px}
+button{border:0;border-radius:12px;padding:12px 16px;font-weight:750;font-size:15px;cursor:pointer}
+#start{background:#172033;color:white;width:100%}#stop{background:#e9edf3;width:100%;margin-top:8px}
+.status{font-size:12px;padding:7px 10px;border-radius:20px;background:#e8edf5;white-space:nowrap}
+.on{background:#e4f7ec;color:#117a45}.thinking{background:#fff1d6;color:#8a5a00}.err{background:#ffe6e6;color:#a11}
+.card{background:white;border:1px solid #e1e6ef;border-radius:16px;padding:16px;margin-top:12px}
+.chat{min-height:65vh;max-height:70vh;overflow:auto}.msg{padding:13px 14px;border-radius:13px;margin-bottom:10px;white-space:pre-wrap;line-height:1.5}
+.user{background:#edf3ff}.gpt{background:#f3f4f6}.role{font-size:10px;font-weight:800;opacity:.55;letter-spacing:.08em;margin-bottom:5px}
+.hint{text-align:center;color:#667085;font-size:13px;padding:70px 15px}
+small{display:block;text-align:center;color:#98a2b3;margin-top:10px}
+</style>
+</head>
+<body><main>
+<div class="top"><div><h1>PropelGO AI Interviewer</h1><div class="sub">Speak naturally. It listens automatically and replies in text.</div></div><div id="status" class="status">● Ready</div></div>
+<button id="start">🎤 Start — press only once</button>
+<button id="stop" disabled>Stop interview</button>
+<section id="chat" class="card chat"><div class="hint">Start once, then answer every question verbally.<br>No Listen button after each answer.</div></section>
+<small>Best used in Chrome on Android with microphone permission enabled.</small>
+</main><script src="/app.js"></script></body></html>
